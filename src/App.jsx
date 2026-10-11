@@ -40,7 +40,7 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-[68px] max-w-6xl items-center justify-between gap-4 px-5">
-        <a href="#home" className="text-xl font-extrabold">CareWell Clinic</a>
+        <a href="#home" className="text-lg font-extrabold md:text-xl">CareWell Clinic</a>
         <nav aria-label="Main" className="hidden md:block">
           <ul className="flex gap-7">
             {links.map(([l, h]) => (
@@ -50,7 +50,7 @@ function Header() {
         </nav>
         <div className="flex items-center gap-3">
           <a href="tel:+910000000000" className="hidden text-slate-500 lg:block">{PHONE}</a>
-          <a href="#contact" className={`${btn} border-ink bg-ink text-white hover:bg-slate-800 text-sm md:text-base`}>Book Appointment</a>
+          <a href="#contact" className={`${btn} border-ink bg-ink text-white hover:bg-slate-800 text-sm md:text-base`}><span className="sm:hidden">Book</span><span className="hidden sm:inline">Book Appointment</span></a>
           <button onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}
             className="h-[46px] w-[46px] rounded-lg border border-slate-200 text-2xl md:hidden">☰</button>
         </div>
